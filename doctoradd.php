@@ -2,7 +2,7 @@
   include("partials/dbconnect.php");
 
   // Query to fetch data from the specialization table
-  $query = "SELECT `specialization_id`,`specialization` FROM `specialization`";
+  $query = "SELECT `specialization_id`,`specialization` FROM `specialization` ORDER BY `specialization`";
   $result = mysqli_query($conn, $query);
 
   if (isset($_POST["btn"])) {
@@ -30,6 +30,7 @@
     }
 
   }
+  echo "<h1>Hello</h1>";
 
 
 ?>
@@ -142,13 +143,15 @@
                       
                       // Close HTML select element
                       echo '</select>';
-                  } else {
-                      // Handle query error
-                      echo "Error fetching data from database: " . mysqli_error($conn);
-                  }
-                  
-                  // Close database connection
-                  mysqli_close($conn);
+                      } 
+                      else 
+                      {
+                          // Handle query error
+                          echo "Error fetching data from database: " . mysqli_error($conn);
+                      }
+                      
+                      // Close database connection
+                      mysqli_close($conn);
                   ?>
                     
                     <label class="form-label select-label">Specialization</label>

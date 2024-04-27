@@ -40,6 +40,7 @@
                                 <p class="card-text">DOB: <?php echo $row['d_o_b']; ?></p>
                                 <p class="card-text">Gender: <?php echo $row['gender']; ?></p>
                                 <p class="card-text">Specialization: <?php echo $row['specialization']; ?></p>
+                                <button class="btn btn-danger">Delete</button>
                             </div>
                         </div>
                     </div>
